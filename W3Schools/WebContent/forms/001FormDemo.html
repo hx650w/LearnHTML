@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Demo</title>
+		<meta name="description" content="This page demonstrates how to create basic form">
+		<meta name="keywords" content="HTML form, form tag, form element">
+		<meta name="author" content="Yogesh Ralebhat">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=10.0">
+	</head>
+	
+	<body>
+		<!-- Form tag is used to define a form by using which we can collect user data. -->
+		<form action="newuser.asp" method="POST">
+			<fieldset>
+				<legend>Personal Information:</legend>
+				
+				<p>First Name:<br>
+					<input type="text" name="firstName">
+				</p>
+				
+				<p>Last Name:<br>
+					<input type="text" name="lastName">
+				</p>
+				
+				<p>Gender:<br>
+					<input type="radio" name="gender" value="male" checked>Male<br>
+					<input type="radio" name="gender" value="female">Female<br>
+					<input type="radio" name="gender" value="other">Other<br>
+				</p>
+				
+				<p>
+					<input type="submit" value="Submit">
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>
