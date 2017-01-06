@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1 id="localStorageMessage"></h1>
+	<script>
+		if(typeof(Storage) !== "undefined") {
+			document.getElementById("localStorageMessage").innerHTML = "Local Storage is Available!"
+		} else {
+			document.getElementById("localStorageMessage").innerHTML = "Local Storage is NOT Available!"
+		}
+	</script>
+</body>
+</html>

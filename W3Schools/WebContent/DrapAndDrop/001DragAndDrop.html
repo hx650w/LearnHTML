@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drag and Drop Demo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<meta name="description" content="This page demonstrates how to use drag and drop functionality.">
+		<meta name="author" content="Yogesh Ralebhat">
+		<meta name="keywords" content="HTML5 Drag And Drop, Drag and Drop">
+		<meta http-equiv="refresh" content="30">
+		
+		<style>
+			div {
+				width: 355px;
+				height: 267px;
+				border: 1px solid black;
+				
+				margin-bottom: 10px;
+			}
+		</style>
+
+		<script>
+			function dragImage(ev) {
+				console.log("Dragging image: " + ev.target.id);
+				ev.dataTransfer.setData("imageId", ev.target.id);
+			}
+			
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+			
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("imageId");
+				console.log("Dropped image: " + data);
+				ev.target.appendChild(document.getElementById(data));
+			}
+		</script>		
+	</head>
+	
+	<body>
+		<div id="simpleDiv" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<img id="fearlessImage" alt="Here is the draggable image" src="img1.jpg" style="width: 353px; height: 265px" draggable="true" ondragstart="dragImage(event)">
+	</body>
+</html>

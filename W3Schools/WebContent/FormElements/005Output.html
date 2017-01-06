@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Output tag demo.</title>
+		<meta name="description" content="This page demonstrates how to use the output element.">
+		<meta name="author" content="Yogesh Ralebhat">
+		<meta name="keywords" content="HTML Output, Output Tag">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value);">
+			<!-- output tag is used to perform calculations ( like one performed by javascript) -->
+			0<input type="range" name="a" id="a" value="50">100 + 
+			<input type="number" name="b" id="b" value="50"> = 
+			<output name="x" for="a b"></output>
+			<br><br>
+			<input type="submit">
+		</form>	
+	</body>
+</html>
